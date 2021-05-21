@@ -17,6 +17,9 @@ The following components are added in the example:
 ### RelevanceInspector
 Connects to `buildRelevanceInspector` to get the Debug information. The UI will show a `Debug Info switch` to enable/disable the debug information.
 Once enabled, it will show a `bug icon`, which will show a modal window `RelevanceInspectorWindow` with the debug information presented in JSON format. The JSON is presented using a `react-json-view` component.
+
+![Debug Information](images/Main.PNG)
+
 In order to enable the component, add this to your `App.tsx`:
 ```javascript
 <Grid item xs={6}>
@@ -26,6 +29,9 @@ In order to enable the component, add this to your `App.tsx`:
 
 ### RelevanceInspectorResult
 Debug information is also available for each result. This component will show that. If the `RelevanceInspector` is enabled, it will show on a result level a `bug icon`. That will launch the same `RelevanceInspectorWindow`. In this case it will only show the debug information for the current result.
+
+![Debug Information](images/Result.PNG)
+
 In order to enable the component, add this to your `ResultList.tsx`:
 ```javascript
 <RelevanceInspectorResult result={result} index={index} />
